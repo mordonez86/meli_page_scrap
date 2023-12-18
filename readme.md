@@ -14,3 +14,7 @@ Este repositorio contiene un script para realizar scraping en MercadoLibre. El s
 
 ## Pendiente
 - Mejorar la lógica del `user_agent` para descargarlo de manera aleatoria de internet.
+
+## Funcionamiento
+- Buildear el contenedor y ejecutar desde airflow usando el operador `DockerOperator`.
+- Va a generar en el host en la ruta /data una carpeta donde guardara con el nombre de la busqueda y el dia de bajada las primeras 40 paginas de determinada busqueda
