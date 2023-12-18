@@ -26,7 +26,7 @@ def get_driver():
     chrome_options.add_argument("--disable-browser-side-navigation")
     chrome_options.add_argument("--window-size=1920x1080")
     chrome_options.add_argument("--start-maximized")
-    chrome_options.add_argument(f"--user-agent={get_random_user_agent()}")  # Using a function to get a random user agent
+    chrome_options.add_argument(f"--user-agent={get_random_user_agent()}")
     driver = webdriver.Remote(
     command_executor='http://192.168.0.138:3000/webdriver',
         options=chrome_options,
@@ -45,11 +45,11 @@ def get_random_user_agent():
 
 
 def main(URL,search_term):
-    # driver section
+   
     driver = get_driver()
     driver.get(URL)
     page_name= search_term.replace(" ", "_")
-    # folder sections
+   
     home_folder="data"
     folder_date_name=datetime.now().strftime("%d-%m-%Y")
     file_hour_name=datetime.now().strftime("%I%p")
